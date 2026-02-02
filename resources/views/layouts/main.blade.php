@@ -5,31 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zonera - Virtual Study</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-color: #f8f8f7;
+            --table-beige: #cbc0b2;
+            --accent-wine: #550b14;
+            --muted-brown: #7e6961;
+        }
         body { 
-            background-color: #f8f8f7; /* Off-white */
-            color: #7e6961; /* Muted Brown */
+            background-color: var(--bg-color);
+            font-family: 'Quicksand', sans-serif;
+            color: var(--muted-brown);
+            overflow-x: hidden;
         }
-        .bg-beige { background-color: #cbc0b2; }
-        .text-wine { color: #550b14; }
-        .isometric-card {
-            border-radius: 20px;
+        /* Navbar ala Dock di Bawah */
+        .bottom-nav {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(203, 192, 178, 0.8); /* Beige dengan transparansi */
+            backdrop-filter: blur(10px);
+            padding: 10px 30px;
+            border-radius: 50px;
+            display: flex;
+            gap: 25px;
+            border: 1px solid rgba(126, 105, 97, 0.2);
+            z-index: 1000;
+            box-shadow: 0 50px 50px rgba(0,0,0,0.05);
+        }
+        .nav-link {
             transition: all 0.3s ease;
-            box-shadow: 8px 8px 0px #cbc0b2;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--muted-brown);
         }
-        .isometric-card:hover { transform: translate(-4px, -4px); box-shadow: 12px 12px 0px #7e6961; }
+        .nav-link:hover {
+            color: var(--accent-wine);
+            transform: translateY(-5px);
+        }
     </style>
 </head>
 <body class="antialiased">
-    <nav class="p-6 flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-wine">zonera</h1>
-        <div class="space-x-6">
-            <a href="/">Home</a>
-            <a href="/library">Library</a>
-            <a href="/app" class="bg-wine text-white px-4 py-2 rounded-full">Mulai Belajar</a>
-        </div>
-    </nav>
 
     @yield('content')
+
+    <nav class="bottom-nav">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/library" class="nav-link">Library</a>
+        <a href="/gallery" class="nav-link">Gallery</a>
+        <a href="/contact" class="nav-link">Contact</a>
+        <a href="/app" class="nav-link font-bold text-wine">App</a>
+    </nav>
+
 </body>
 </html>
