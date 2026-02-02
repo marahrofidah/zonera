@@ -74,10 +74,10 @@
 
     <!-- CTA Buttons -->
     <div class="flex flex-col sm:flex-row gap-4 z-10 mb-8">
-        <a href="/app" class="bg-[#E63E88] hover:bg-[#384D95] text-white px-10 py-3 rounded-full shadow-md font-bold tracking-wide text-sm transition-all duration-300 transform hover:scale-102">
+        <a href="/app" class="cta-button cta-button-primary text-white px-10 py-3 rounded-full shadow-md font-bold tracking-wide text-sm">
             🚀 Mulai Sekarang
         </a>
-        <a href="/about" class="bg-white hover:bg-gray-50 text-[#384D95] px-10 py-3 rounded-full shadow-md font-bold tracking-wide text-sm transition-all duration-300 border-2 border-[#384D95] transform hover:scale-102">
+        <a href="/about" class="cta-button cta-button-secondary bg-white text-[#384D95] px-10 py-3 rounded-full shadow-md font-bold tracking-wide text-sm border-2 border-[#384D95]">
             📖 Pelajari Lebih Lanjut
         </a>
     </div>
@@ -113,6 +113,19 @@
         50% { transform: translateY(-15px); }
     }
 
+    @keyframes bounce-soft {
+        0%, 100% { 
+            transform: translateY(0px) scale(1);
+        }
+        50% { 
+            transform: translateY(-12px) scale(1.02);
+        }
+    }
+
+    .feature-item img {
+        animation: bounce-soft 4s ease-in-out infinite;
+    }
+
     @keyframes pulse-glow {
         0%, 100% { 
             opacity: 0;
@@ -135,9 +148,43 @@
         }
     }
 
-    @keyframes scale-pulse {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.05); }
+    @keyframes buttonHoverGlow {
+        0% {
+            box-shadow: 0 0 0 0 rgba(230, 62, 136, 0.7);
+        }
+        70% {
+            box-shadow: 0 0 0 10px rgba(230, 62, 136, 0);
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(230, 62, 136, 0);
+        }
+    }
+
+    .cta-button {
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .cta-button-primary {
+        background: linear-gradient(135deg, #E63E88 0%, #d42d74 100%);
+    }
+
+    .cta-button-primary:hover {
+        transform: translateY(-4px) scale(1.08);
+        box-shadow: 0 12px 24px rgba(230, 62, 136, 0.4), 0 0 0 3px rgba(56, 77, 149, 0.1);
+        animation: buttonHoverGlow 0.6s ease-out;
+    }
+
+    .cta-button-secondary {
+        transition: all 0.3s ease;
+    }
+
+    .cta-button-secondary:hover {
+        transform: translateY(-4px) scale(1.08);
+        background-color: #F5F5F5;
+        box-shadow: 0 12px 24px rgba(56, 77, 149, 0.2);
+        border-color: #E63E88;
+        color: #E63E88;
     }
 
     .feature-item {
