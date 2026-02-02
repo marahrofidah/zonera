@@ -3,14 +3,14 @@
 @section('content')
 <canvas id="interactive-bg" class="fixed inset-0 -z-10"></canvas>
 
-<main class="min-h-screen flex flex-col items-center justify-center pt-20 pb-32 relative px-4">
+<main class="min-h-screen flex flex-col items-center justify-center pt-8 pb-32 relative px-4">
     <div class="w-full max-w-7xl mx-auto">
-        <div class="text-center mb-16 z-10">
+        <div class="text-center mb-12 z-10">
             <h1 class="text-5xl md:text-6xl font-black text-[#384D95] mb-4">Pilih Metode Fokusmu</h1>
             <p class="text-xl text-[#384D95] opacity-70 font-medium">Klik metode untuk melihat detail dan mulai belajar! 🎯</p>
         </div>
 
-        <div class="mb-12 z-10 flex flex-wrap justify-center gap-3">
+        <div class="mb-8 z-10 flex flex-wrap justify-center gap-3">
             <button onclick="filterMethods('all')" class="filter-btn active px-8 py-3.5 rounded-full font-bold transition-all duration-300 bg-gradient-to-r from-[#E63E88] to-[#d42d74] text-white shadow-lg hover:scale-110 text-base">🎯 Semua</button>
             <button onclick="filterMethods('short')" class="filter-btn px-8 py-3.5 rounded-full font-bold transition-all duration-300 border-2 border-[#384D95] text-[#384D95] bg-white/50 hover:bg-[#384D95] hover:text-white text-base">⚡ Singkat</button>
             <button onclick="filterMethods('long')" class="filter-btn px-8 py-3.5 rounded-full font-bold transition-all duration-300 border-2 border-[#E63E88] text-[#E63E88] bg-white/50 hover:bg-[#E63E88] hover:text-white text-base">🔥 Panjang</button>
@@ -29,7 +29,7 @@
                     <p class="text-[#384D95] text-xs opacity-80 leading-snug my-2 line-clamp-2 font-semibold">
                         Teknik klasik: 25 menit fokus penuh dan 5 menit istirahat untuk menjaga stamina mental.
                     </p>
-                    <a href="/app?method=pomodoro" class="text-xs font-black text-[#E63E88] hover:underline transition-all">MULAI SESI →</a>
+                    <a href="/room/pomodoro" class="text-xs font-black text-[#E63E88] hover:underline transition-all">MULAI SESI →</a>
                 </div>
             </div>
 
@@ -43,7 +43,7 @@
                     <p class="text-[#384D95] text-xs opacity-80 leading-snug my-2 line-clamp-2 font-semibold">
                         Sesi intens tanpa gangguan. Cocok untuk tugas kognitif berat yang butuh analisa dalam.
                     </p>
-                    <a href="/app?method=deep-work" class="text-xs font-black text-[#384D95] hover:underline transition-all">MULAI SESI →</a>
+                    <a href="/room/deep-work" class="text-xs font-black text-[#384D95] hover:underline transition-all">MULAI SESI →</a>
                 </div>
             </div>
 
@@ -57,7 +57,7 @@
                     <p class="text-[#384D95] text-xs opacity-80 leading-snug my-2 line-clamp-2 font-semibold">
                         Bekerja mengikuti ritme alami tubuh (90-120 menit) untuk produktivitas yang berkelanjutan.
                     </p>
-                    <a href="/app?method=ultradian" class="text-xs font-black text-[#E63E88] hover:underline transition-all">MULAI SESI →</a>
+                    <a href="/room/ultradian" class="text-xs font-black text-[#E63E88] hover:underline transition-all">MULAI SESI →</a>
                 </div>
             </div>
 
@@ -71,7 +71,7 @@
                     <p class="text-[#384D95] text-xs opacity-80 leading-snug my-2 line-clamp-2 font-semibold">
                         Sesi belajar marathon dengan jeda recovery singkat. Dirancang khusus untuk persiapan ujian.
                     </p>
-                    <a href="/app?method=marathon" class="text-xs font-black text-[#384D95] hover:underline transition-all">MULAI SESI →</a>
+                    <a href="/room/marathon" class="text-xs font-black text-[#384D95] hover:underline transition-all">MULAI SESI →</a>
                 </div>
             </div>
 
@@ -85,7 +85,7 @@
                     <p class="text-[#384D95] text-xs opacity-80 leading-snug my-2 line-clamp-2 font-semibold">
                         Satu jam tanpa ampun. Tuntaskan tugas spesifik dengan fokus dan kecepatan maksimal.
                     </p>
-                    <a href="/app?method=power-hour" class="text-xs font-black text-[#E63E88] hover:underline transition-all">MULAI SESI →</a>
+                    <a href="/room/power-hour" class="text-xs font-black text-[#E63E88] hover:underline transition-all">MULAI SESI →</a>
                 </div>
             </div>
 
@@ -99,13 +99,13 @@
                     <p class="text-[#384D95] text-xs opacity-80 leading-snug my-2 line-clamp-2 font-semibold">
                         Blok waktu komprehensif untuk penguasaan materi secara menyeluruh dan latihan soal.
                     </p>
-                    <a href="/app?method=study-block" class="text-xs font-black text-[#384D95] hover:underline transition-all">MULAI SESI →</a>
+                    <a href="/room/study-block" class="text-xs font-black text-[#384D95] hover:underline transition-all">MULAI SESI →</a>
                 </div>
             </div>
 
         </div>
 
-        <div class="mt-14 z-10 text-center">
+        <div class="mt-10 z-10 text-center">
             <div class="inline-block bg-white/30 backdrop-blur-sm px-10 py-4 rounded-full border border-white/50 shadow-sm">
                 <p class="text-[#384D95] font-black text-sm italic">💡 Tips: Pilih metode Marathon jika kamu perlu mengejar materi dalam satu malam!</p>
             </div>

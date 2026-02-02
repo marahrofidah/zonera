@@ -95,9 +95,9 @@
             <img src="/images/icons/nav-contact.png" alt="Contact">
             <span>Contact</span>
         </a>
-        <a href="/app" class="nav-link active" style="background-color: var(--primary-blue); color: var(--accent-white);">
+        <a href="/profile" class="nav-link active" style="background-color: var(--primary-blue); color: var(--accent-white);">
             <img src="/images/icons/nav-app.png" alt="App">
-            <span>App</span>
+            <span>Profile</span>
         </a>
     </nav>
 

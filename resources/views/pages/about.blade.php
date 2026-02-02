@@ -3,16 +3,16 @@
 @section('content')
 <canvas id="interactive-bg" class="fixed inset-0 -z-10"></canvas>
 
-<main class="min-h-screen flex flex-col items-center justify-center pt-20 pb-32 relative px-4">
+<main class="min-h-screen flex flex-col items-center justify-center pt-8 pb-32 relative px-4">
     <!-- Hero Section -->
-    <div class="text-center mb-10 z-10 max-w-3xl">
+    <div class="text-center mb-12 z-10 max-w-3xl">
         <h1 class="text-6xl md:text-7xl font-black text-[#384D95] mb-6">About zonera</h1>
         <p class="text-xl text-[#384D95] opacity-100 font-semibold mb-4">Platform Belajar yang Bikin Belajar Jadi Seru & Produktif!</p>
         <p class="text-lg text-[#384D95] opacity-100 font-medium">Kami percaya belajar itu gak perlu membosankan. Dengan zonera, kelola waktu, atur tasks, main games, dengarkan musik, dan catat pelajaran—semuanya dalam satu tempat yang fun! 🎉</p>
     </div>
 
     <!-- Mission & Vision Section -->
-    <div class="w-full max-w-6xl mb-20 z-10">
+    <div class="w-full max-w-6xl mb-12 z-10">
         <div class="grid md:grid-cols-2 gap-8">
             <!-- Mission Card -->
             <div class="group bg-[#E63E88] backdrop-blur-sm rounded-full py-8 md:py-10 px-16 md:px-24 border-2 border-[#E63E88] hover:border-[#384D95] transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer">
@@ -35,7 +35,7 @@
     </div>
 
     <!-- Features Section -->
-    <div class="w-full max-w-5xl mb-20 z-10">
+    <div class="w-full max-w-5xl mb-12 z-10">
         <h2 class="text-4xl font-black text-center text-[#384D95] mb-12">Mengapa zonera?</h2>
         <div class="grid md:grid-cols-3 gap-6">
             <!-- Feature 1 -->
@@ -83,7 +83,7 @@
     </div>
 
     <!-- Stats Section -->
-    <div class="w-full max-w-5xl mb-20 z-10">
+    <div class="w-full max-w-5xl mb-12 z-10">
         <div class="bg-gradient-to-r from-[#E63E88] to-[#384D95] rounded-full p-12 text-white">
             <div class="grid md:grid-cols-4 gap-8 text-center">
                 <div class="stat-item">
@@ -110,7 +110,7 @@
     <div class="text-center z-10 mb-8">
         <h2 class="text-4xl font-black text-[#384D95] mb-6">Siap Mulai Belajar dengan Cara Baru?</h2>
         <p class="text-xl text-[#384D95] opacity-70 font-medium mb-8 max-w-2xl mx-auto">Join ribuan pelajar yang udah rasakan perbedaan belajar dengan zonera. Yuk, transform your study routine sekarang juga!</p>
-        <a href="/app" class="inline-block cta-button cta-button-primary text-white px-12 py-4 rounded-full shadow-lg font-bold tracking-wide text-lg">
+        <a href="/library" class="inline-block cta-button cta-button-primary text-white px-12 py-4 rounded-full shadow-lg font-bold tracking-wide text-lg">
             🚀 Mulai Sekarang - Gratis!
         </a>
     </div>

@@ -3,53 +3,53 @@
 @section('content')
 <canvas id="interactive-bg" class="fixed inset-0 -z-10"></canvas>
 
-<main class="min-h-screen flex flex-col items-center justify-center pt-10 pb-32 relative">
+<main class="min-h-screen flex flex-col items-center justify-center pt-4 pb-32 relative">
     <!-- Hero Section -->
-    <div class="text-center mb-16 z-10 max-w-2xl px-4">
+    <div class="text-center mb-8 z-10 max-w-2xl px-4">
         <h1 class="text-6xl md:text-7xl font-black text-[#384D95] mb-4">zonera</h1>
         <p class="text-lg text-[#384D95] opacity-100 mb-3 font-semibold">Platform Belajar Interaktif & Seru</p>
         <p class="text-sm md:text-base text-[#384D95] opacity-100 font-medium">Kelola waktu belajar, atur to-do, mainkan games, dengarkan musik, dan catat di kalender!</p>
     </div>
 
     <!-- Features Section - Interactive Carousel -->
-    <div class="relative w-full max-w-4xl px-4 mb-16 z-10">
-        <div class="relative overflow-hidden rounded-full bg-white backdrop-blur-sm p-12 shadow-lg border border-gray-100 carousel-glow">
+    <div class="relative w-full max-w-3xl px-4 mb-8 z-10">
+        <div class="relative overflow-hidden rounded-full bg-white backdrop-blur-sm p-8 shadow-lg border border-gray-100 carousel-glow">
             <!-- Carousel Container -->
-            <div class="relative h-96 flex items-center justify-center">
+            <div class="relative h-72 flex items-center justify-center">
                 <!-- Feature Items -->
                 <div id="featureCarousel" class="absolute inset-0 flex items-center justify-center">
                     <!-- Feature 1 -->
-                    <div class="feature-item absolute opacity-0 cursor-pointer transform transition-all hover:scale-105 bg-white/60 backdrop-blur-sm rounded-full p-8" style="transform: translateX(500px);">
+                    <div class="feature-item absolute opacity-0 cursor-pointer transform transition-all hover:scale-105 bg-white/60 backdrop-blur-sm rounded-full p-0" style="transform: translateX(500px);">
                         <img src="/images/icons/jadwal.png" alt="Jadwal Belajar" class="w-48 h-48 mx-auto mb-6">
                         <h3 class="text-2xl font-black text-[#E63E88] mb-2">Jadwal Belajar</h3>
                         <p class="text-[#384D95] max-w-sm font-medium leading-relaxed opacity-100">Atur jam belajar dengan fleksibel & dapatkan reminder otomatis</p>
                     </div>
                     <!-- Feature 2 -->
-                    <div class="feature-item absolute opacity-0 cursor-pointer transform transition-all hover:scale-105 bg-white/60 backdrop-blur-sm rounded-full p-8" style="transform: translateX(500px);">
+                    <div class="feature-item absolute opacity-0 cursor-pointer transform transition-all hover:scale-105 bg-white/60 backdrop-blur-sm rounded-full p-0" style="transform: translateX(500px);">
                         <img src="/images/icons/todo.png" alt="To-Do List" class="w-48 h-48 mx-auto mb-6">
                         <h3 class="text-2xl font-black text-[#E63E88] mb-2">To-Do List</h3>
                         <p class="text-[#384D95] max-w-sm font-medium leading-relaxed opacity-100">Catat tasks, prioritas, & raih kepuasan setiap check!</p>
                     </div>
                     <!-- Feature 3 -->
-                    <div class="feature-item absolute opacity-0 cursor-pointer transform transition-all hover:scale-105 bg-white/60 backdrop-blur-sm rounded-full p-8" style="transform: translateX(500px);">
+                    <div class="feature-item absolute opacity-0 cursor-pointer transform transition-all hover:scale-105 bg-white/60 backdrop-blur-sm rounded-full p-0" style="transform: translateX(500px);">
                         <img src="/images/icons/games.png" alt="Mini Games" class="w-48 h-48 mx-auto mb-6">
                         <h3 class="text-2xl font-black text-[#E63E88] mb-2">Mini Games</h3>
                         <p class="text-[#384D95] max-w-sm font-medium leading-relaxed opacity-100">Mainkan quiz, puzzle, & games seru untuk refresh pikiran</p>
                     </div>
                     <!-- Feature 4 -->
-                    <div class="feature-item absolute opacity-0 cursor-pointer transform transition-all hover:scale-105 bg-white/60 backdrop-blur-sm rounded-full p-8" style="transform: translateX(500px);">
+                    <div class="feature-item absolute opacity-0 cursor-pointer transform transition-all hover:scale-105 bg-white/60 backdrop-blur-sm rounded-full p-0" style="transform: translateX(500px);">
                         <img src="/images/icons/musik.png" alt="Musik Fokus" class="w-48 h-48 mx-auto mb-6">
                         <h3 class="text-2xl font-black text-[#E63E88] mb-2">Musik Fokus</h3>
                         <p class="text-[#384D95] max-w-sm font-medium leading-relaxed opacity-100">3 playlist curated: Focus, Chill, Energize</p>
                     </div>
                     <!-- Feature 5 -->
-                    <div class="feature-item absolute opacity-0 cursor-pointer transform transition-all hover:scale-105 bg-white/60 backdrop-blur-sm rounded-full p-8" style="transform: translateX(500px);">
+                    <div class="feature-item absolute opacity-0 cursor-pointer transform transition-all hover:scale-105 bg-white/60 backdrop-blur-sm rounded-full p-0" style="transform: translateX(500px);">
                         <img src="/images/icons/kalender.png" alt="Kalender Catatan" class="w-48 h-48 mx-auto mb-6">
                         <h3 class="text-2xl font-black text-[#E63E88] mb-2">Kalender Catatan</h3>
                         <p class="text-[#384D95] max-w-sm font-medium leading-relaxed opacity-100">Dokumentasi harian dengan markdown & color-coded entries</p>
                     </div>
                     <!-- Feature 6 -->
-                    <div class="feature-item absolute opacity-0 cursor-pointer transform transition-all hover:scale-105 bg-white/60 backdrop-blur-sm rounded-full p-8" style="transform: translateX(500px);">
+                    <div class="feature-item absolute opacity-0 cursor-pointer transform transition-all hover:scale-105 bg-white/60 backdrop-blur-sm rounded-full p-0" style="transform: translateX(500px);">
                         <img src="/images/icons/poin.png" alt="Poin & Level" class="w-48 h-48 mx-auto mb-6">
                         <h3 class="text-2xl font-black text-[#E63E88] mb-2">Poin & Level</h3>
                         <p class="text-[#384D95] max-w-sm font-medium leading-relaxed opacity-100">Naik level, unlock badge, & compete di leaderboard</p>
@@ -66,15 +66,15 @@
             </div>
 
             <!-- Dots Indicator -->
-            <div id="dotsContainer" class="flex justify-center gap-2 mt-6">
+            <div id="dotsContainer" class="flex justify-center gap-2 mt-4">
                 <!-- Dots will be generated by JS -->
             </div>
         </div>
     </div>
 
     <!-- CTA Buttons -->
-    <div class="flex flex-col sm:flex-row gap-4 z-10 mb-8">
-        <a href="/app" class="cta-button cta-button-primary text-white px-10 py-3 rounded-full shadow-md font-bold tracking-wide text-sm">
+    <div class="flex flex-col sm:flex-row gap-4 z-10 mb-4">
+        <a href="/library" class="cta-button cta-button-primary text-white px-10 py-3 rounded-full shadow-md font-bold tracking-wide text-sm">
             🚀 Mulai Sekarang
         </a>
         <a href="/about" class="cta-button cta-button-secondary bg-white text-[#384D95] px-10 py-3 rounded-full shadow-md font-bold tracking-wide text-sm border-2 border-[#384D95]">
