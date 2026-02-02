@@ -20,7 +20,13 @@
         <div class="z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <div class="method-card method-all method-short bg-white/90 backdrop-blur-md rounded-full p-4 pr-10 transition-all duration-300 hover:shadow-2xl hover:scale-105 border border-white flex items-center gap-5 cursor-pointer group shadow-sm">
-                <div class="w-28 h-28 rounded-full bg-pink-100 flex items-center justify-center text-5xl flex-shrink-0 group-hover:rotate-12 transition-transform shadow-inner">🍅</div>
+                <div class="w-28 h-28 rounded-full bg-pink-100 flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform shadow-inner">
+                <img 
+                    src="/images/icons/pomodoro.png" 
+                    alt="Pomodoro"
+                    class="w-16 h-16 object-contain"
+                >
+                </div>
                 <div class="flex flex-col min-w-0">
                     <div class="flex items-center gap-3">
                         <h3 class="text-xl font-black text-[#E63E88] leading-tight">Pomodoro</h3>
@@ -34,8 +40,13 @@
             </div>
 
             <div class="method-card method-all method-long bg-white/90 backdrop-blur-md rounded-full p-4 pr-10 transition-all duration-300 hover:shadow-2xl hover:scale-105 border border-white flex items-center gap-5 cursor-pointer group shadow-sm">
-                <div class="w-28 h-28 rounded-full bg-blue-100 flex items-center justify-center text-5xl flex-shrink-0 group-hover:rotate-12 transition-transform shadow-inner">🧠</div>
-                <div class="flex flex-col min-w-0">
+            <div class="w-28 h-28 rounded-full bg-pink-100 flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform shadow-inner">
+                <img 
+                    src="/images/icons/deep-work.png" 
+                    alt="Deep Work"
+                    class="w-16 h-16 object-contain"
+                >
+                </div>                <div class="flex flex-col min-w-0">
                     <div class="flex items-center gap-3">
                         <h3 class="text-xl font-black text-[#384D95] leading-tight">Deep Work</h3>
                         <span class="text-[10px] font-black bg-[#384D95] text-white px-2.5 py-1 rounded-full uppercase">90m</span>
@@ -48,8 +59,13 @@
             </div>
 
             <div class="method-card method-all method-short bg-white/90 backdrop-blur-md rounded-full p-4 pr-10 transition-all duration-300 hover:shadow-2xl hover:scale-105 border border-white flex items-center gap-5 cursor-pointer group shadow-sm">
-                <div class="w-28 h-28 rounded-full bg-pink-100 flex items-center justify-center text-5xl flex-shrink-0 group-hover:rotate-12 transition-transform shadow-inner">⚡</div>
-                <div class="flex flex-col min-w-0">
+            <div class="w-28 h-28 rounded-full bg-pink-100 flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform shadow-inner">
+                <img 
+                    src="/images/icons/ultradian.png" 
+                    alt="Ultradian"
+                    class="w-16 h-16 object-contain"
+                >
+                </div>                <div class="flex flex-col min-w-0">
                     <div class="flex items-center gap-3">
                         <h3 class="text-xl font-black text-[#E63E88] leading-tight">Ultradian</h3>
                         <span class="text-[10px] font-black bg-[#E63E88] text-white px-2.5 py-1 rounded-full uppercase">50m</span>
@@ -61,8 +77,14 @@
             </div>
 
             <div class="method-card method-all method-exam bg-white/90 backdrop-blur-md rounded-full p-4 pr-10 transition-all duration-300 hover:shadow-2xl hover:scale-105 border border-white flex items-center gap-5 cursor-pointer group shadow-sm">
-                <div class="w-28 h-28 rounded-full bg-blue-100 flex items-center justify-center text-5xl flex-shrink-0 group-hover:rotate-12 transition-transform shadow-inner">🏃</div>
-                <div class="flex flex-col min-w-0">
+            <div class="w-28 h-28 rounded-full bg-pink-100 flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform shadow-inner">
+                <img 
+                    src="/images/icons/marathon.png" 
+                    alt="Marathon"
+                    class="w-16 h-16 object-contain"
+                >
+                </div>     
+                    <div class="flex flex-col min-w-0">
                     <div class="flex items-center gap-3">
                         <h3 class="text-xl font-black text-[#384D95] leading-tight">Marathon</h3>
                         <span class="text-[10px] font-black bg-[#384D95] text-white px-2.5 py-1 rounded-full uppercase">120m</span>
@@ -74,7 +96,13 @@
             </div>
 
             <div class="method-card method-all method-short bg-white/90 backdrop-blur-md rounded-full p-4 pr-10 transition-all duration-300 hover:shadow-2xl hover:scale-105 border border-white flex items-center gap-5 cursor-pointer group shadow-sm">
-                <div class="w-28 h-28 rounded-full bg-pink-100 flex items-center justify-center text-5xl flex-shrink-0 group-hover:rotate-12 transition-transform shadow-inner">💪</div>
+            <div class="w-28 h-28 rounded-full bg-pink-100 flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform shadow-inner">
+                <img 
+                    src="/images/icons/power-hour.png" 
+                    alt="Power Hour"
+                    class="w-16 h-16 object-contain"
+                >
+                </div>                
                 <div class="flex flex-col min-w-0">
                     <div class="flex items-center gap-3">
                         <h3 class="text-xl font-black text-[#E63E88] leading-tight">Power Hour</h3>
@@ -87,7 +115,13 @@
             </div>
 
             <div class="method-card method-all method-exam bg-white/90 backdrop-blur-md rounded-full p-4 pr-10 transition-all duration-300 hover:shadow-2xl hover:scale-105 border border-white flex items-center gap-5 cursor-pointer group shadow-sm">
-                <div class="w-28 h-28 rounded-full bg-blue-100 flex items-center justify-center text-5xl flex-shrink-0 group-hover:rotate-12 transition-transform shadow-inner">📚</div>
+<div class="w-28 h-28 rounded-full bg-pink-100 flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform shadow-inner">
+                <img 
+                    src="/images/icons/study-block.png" 
+                    alt="Study Block"
+                    class="w-16 h-16 object-contain"
+                >
+                </div>                
                 <div class="flex flex-col min-w-0">
                     <div class="flex items-center gap-3">
                         <h3 class="text-xl font-black text-[#384D95] leading-tight">Study Block</h3>
