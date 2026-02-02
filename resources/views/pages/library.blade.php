@@ -26,8 +26,8 @@
                         <h3 class="text-xl font-black text-[#E63E88] leading-tight">Pomodoro</h3>
                         <span class="text-[10px] font-black bg-[#E63E88] text-white px-2.5 py-1 rounded-full uppercase">25m</span>
                     </div>
-                    <p class="text-[#384D95] text-xs opacity-80 leading-snug my-2 line-clamp-2 font-semibold">
-                        Teknik klasik: 25 menit fokus penuh dan 5 menit istirahat untuk menjaga stamina mental.
+                    <p class="text-[#384D95] text-xs opacity-80 leading-snug my-2 font-semibold">
+                        Teknik fokus 25 menit dengan istirahat 5 menit. Cocok untuk tugas rutin dan membaca.
                     </p>
                     <a href="/room/pomodoro" class="text-xs font-black text-[#E63E88] hover:underline transition-all">MULAI SESI →</a>
                 </div>
@@ -40,8 +40,8 @@
                         <h3 class="text-xl font-black text-[#384D95] leading-tight">Deep Work</h3>
                         <span class="text-[10px] font-black bg-[#384D95] text-white px-2.5 py-1 rounded-full uppercase">90m</span>
                     </div>
-                    <p class="text-[#384D95] text-xs opacity-80 leading-snug my-2 line-clamp-2 font-semibold">
-                        Sesi intens tanpa gangguan. Cocok untuk tugas kognitif berat yang butuh analisa dalam.
+                    <p class="text-[#384D95] text-xs opacity-80 leading-snug my-2 font-semibold">
+                        Sesi fokus mendalam tanpa gangguan. Ideal untuk menulis, coding, atau analisis kompleks.
                     </p>
                     <a href="/room/deep-work" class="text-xs font-black text-[#384D95] hover:underline transition-all">MULAI SESI →</a>
                 </div>
@@ -54,9 +54,8 @@
                         <h3 class="text-xl font-black text-[#E63E88] leading-tight">Ultradian</h3>
                         <span class="text-[10px] font-black bg-[#E63E88] text-white px-2.5 py-1 rounded-full uppercase">50m</span>
                     </div>
-                    <p class="text-[#384D95] text-xs opacity-80 leading-snug my-2 line-clamp-2 font-semibold">
-                        Bekerja mengikuti ritme alami tubuh (90-120 menit) untuk produktivitas yang berkelanjutan.
-                    </p>
+                    <p class="text-[#384D95] text-xs opacity-80 leading-snug my-2 font-semibold">
+                    Mengikuti ritme alami tubuh. Fokus 50 menit, istirahat 10 menit untuk menyegarkan otak.                    </p>
                     <a href="/room/ultradian" class="text-xs font-black text-[#E63E88] hover:underline transition-all">MULAI SESI →</a>
                 </div>
             </div>
@@ -68,9 +67,8 @@
                         <h3 class="text-xl font-black text-[#384D95] leading-tight">Marathon</h3>
                         <span class="text-[10px] font-black bg-[#384D95] text-white px-2.5 py-1 rounded-full uppercase">120m</span>
                     </div>
-                    <p class="text-[#384D95] text-xs opacity-80 leading-snug my-2 line-clamp-2 font-semibold">
-                        Sesi belajar marathon dengan jeda recovery singkat. Dirancang khusus untuk persiapan ujian.
-                    </p>
+                    <p class="text-[#384D95] text-xs opacity-80 leading-snug my-2 font-semibold">
+                    Sesi belajar panjang untuk persiapan ujian dengan jeda istirahat 15 menit di tengah-tengah.                    </p>
                     <a href="/room/marathon" class="text-xs font-black text-[#384D95] hover:underline transition-all">MULAI SESI →</a>
                 </div>
             </div>
@@ -82,9 +80,8 @@
                         <h3 class="text-xl font-black text-[#E63E88] leading-tight">Power Hour</h3>
                         <span class="text-[10px] font-black bg-[#E63E88] text-white px-2.5 py-1 rounded-full uppercase">60m</span>
                     </div>
-                    <p class="text-[#384D95] text-xs opacity-80 leading-snug my-2 line-clamp-2 font-semibold">
-                        Satu jam tanpa ampun. Tuntaskan tugas spesifik dengan fokus dan kecepatan maksimal.
-                    </p>
+                    <p class="text-[#384D95] text-xs opacity-80 leading-snug my-2 font-semibold">
+                    Satu jam fokus penuh untuk menyelesaikan tugas spesifik dengan deadline ketat.                    </p>
                     <a href="/room/power-hour" class="text-xs font-black text-[#E63E88] hover:underline transition-all">MULAI SESI →</a>
                 </div>
             </div>
@@ -96,9 +93,8 @@
                         <h3 class="text-xl font-black text-[#384D95] leading-tight">Study Block</h3>
                         <span class="text-[10px] font-black bg-[#384D95] text-white px-2.5 py-1 rounded-full uppercase">180m</span>
                     </div>
-                    <p class="text-[#384D95] text-xs opacity-80 leading-snug my-2 line-clamp-2 font-semibold">
-                        Blok waktu komprehensif untuk penguasaan materi secara menyeluruh dan latihan soal.
-                    </p>
+                    <p class="text-[#384D95] text-xs opacity-80 leading-snug my-2 font-semibold">
+                    Blok waktu intensif untuk menguasai materi ujian, termasuk sesi review dan latihan soal.                    </p>
                     <a href="/room/study-block" class="text-xs font-black text-[#384D95] hover:underline transition-all">MULAI SESI →</a>
                 </div>
             </div>

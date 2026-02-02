@@ -7,9 +7,9 @@
     <div class="max-w-7xl mx-auto">
         <!-- Header Info -->
         <div class="grid grid-cols-4 gap-4 mb-8 z-10 relative">
-            <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-4 border-2 border-[#E63E88] shadow-lg">
-                <p class="text-xs font-bold text-[#E63E88] opacity-60">🍅 Metode</p>
-                <p class="text-lg font-black text-[#E63E88]">Pomodoro</p>
+            <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-4 border-2" style="border-color: {{ $methodColor }}; shadow-lg">
+                <p class="text-xs font-bold opacity-60" style="color: {{ $methodColor }};">{{ $emoji }} Metode</p>
+                <p class="text-lg font-black" style="color: {{ $methodColor }};">{{ $method }}</p>
             </div>
             <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-4 border-2 border-[#384D95] shadow-lg">
                 <p class="text-xs font-bold text-[#384D95] opacity-60">⏰ Waktu</p>
@@ -21,17 +21,17 @@
             </div>
             <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-4 border-2 border-[#384D95] shadow-lg">
                 <p class="text-xs font-bold text-[#384D95] opacity-60">⏱ Durasi</p>
-                <p class="text-lg font-black text-[#E63E88]">25 Menit</p>
+                <p class="text-lg font-black" id="durationDisplay" style="color: {{ $methodColor }};">{{ intval($duration / 60) }} Menit</p>
             </div>
         </div>
 
         <div class="grid lg:grid-cols-3 gap-8 z-10 relative">
-            <!-- Main Room - Meja Selection dengan Perspective 3D -->
+            <!-- Main Room -->
             <div class="lg:col-span-2">
                 <!-- Timer Display -->
-                <div id="timerSection" class="hidden bg-gradient-to-br from-[#E63E88] to-[#d42d74] rounded-3xl p-8 text-white mb-8 shadow-2xl border-4 border-white text-center">
-                    <p class="text-sm opacity-80 mb-2 font-semibold">SESI FOKUS SEDANG BERJALAN</p>
-                    <h2 id="mainTimer" class="text-7xl font-black font-mono mb-4">25:00</h2>
+                <div id="timerSection" class="hidden bg-gradient-to-br {{ $timerGradient }} rounded-3xl p-8 text-white mb-8 shadow-2xl border-4 border-white text-center">
+                    <p class="text-sm opacity-80 mb-2 font-semibold">SESI {{ strtoupper($method) }} SEDANG BERJALAN</p>
+                    <h2 id="mainTimer" class="text-7xl font-black font-mono mb-4">{{ intval($duration / 60) }}:00</h2>
                     <div class="flex gap-4 justify-center">
                         <button id="pauseBtn" class="px-8 py-3 bg-white/20 hover:bg-white/30 rounded-xl font-bold transition-all">⏸ Jeda</button>
                         <button id="stopBtn" class="px-8 py-3 bg-white/20 hover:bg-white/30 rounded-xl font-bold transition-all">⏹ Hentikan</button>
@@ -39,72 +39,22 @@
                     </div>
                 </div>
 
-                <!-- Meja Selection (9 Grid) - Perspective 3D -->
+                <!-- Meja Selection -->
                 <div id="mejaSection" class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 border-2 border-[#384D95] shadow-lg" style="perspective: 1200px;">
-                    <h3 class="text-2xl font-black text-[#384D95] mb-6">Ruangan Pomodoro 🪑</h3>
+                    <h3 class="text-2xl font-black text-[#384D95] mb-6">Ruangan {{ $method }} {{ $emoji }}</h3>
                     <div class="grid grid-cols-3 gap-6" style="transform-style: preserve-3d;">
-                        <!-- Meja 1 -->
-                        <div class="meja-item meja-kosong cursor-pointer rounded-2xl p-6 bg-gradient-to-br from-[#E63E88]/20 to-[#E63E88]/10 border-3 border-[#E63E88] shadow-lg text-center transition-all duration-500" data-meja="1" style="transform: rotateY(-15deg) rotateX(5deg); transform-style: preserve-3d;">
-                            <p class="text-3xl mb-2">🪑</p>
-                            <p class="font-black text-[#384D95] text-sm">Meja 1</p>
-                            <p class="text-xs text-[#384D95] opacity-70">Kosong</p>
+                        @for ($i = 1; $i <= 9; $i++)
+                            @if ($i % 3 == 2)
+                                <div class="meja-item meja-terisi cursor-pointer rounded-2xl p-6 bg-gradient-to-br from-[#FF6519]/20 to-[#FFB84D]/10 border-3 border-[#FF6519] shadow-lg text-center" data-meja="{{ $i }}" style="transform: rotateY({{ ($i == 2 ? 0 : ($i == 5 ? 0 : -15)) }}deg) rotateX({{ ($i == 5 ? 0 : ($i == 2 ? 5 : -5)) }}deg); transform-style: preserve-3d;">
+                                <p class="text-3xl mb-2">👤</p>
+                            @else
+                                <div class="meja-item meja-kosong cursor-pointer rounded-2xl p-6 bg-gradient-to-br from-[#384D95]/20 to-[#384D95]/10 border-3 border-[#384D95] shadow-lg text-center transition-all duration-500" data-meja="{{ $i }}" style="transform-style: preserve-3d;">
+                                <p class="text-3xl mb-2">🪑</p>
+                            @endif
+                            <p class="font-black text-[#384D95] text-sm">Meja {{ $i }}</p>
+                            <p class="text-xs text-[#384D95] opacity-70">{{ ($i % 3 == 2 ? 'Ada Orang' : 'Kosong') }}</p>
                         </div>
-
-                        <!-- Meja 2 -->
-                        <div class="meja-item meja-terisi cursor-pointer rounded-2xl p-6 bg-gradient-to-br from-[#FF6519]/20 to-[#FFB84D]/10 border-3 border-[#FF6519] shadow-lg text-center" data-meja="2" style="transform: rotateY(0deg); transform-style: preserve-3d;">
-                            <p class="text-3xl mb-2">👤</p>
-                            <p class="font-black text-[#384D95] text-sm">Meja 2</p>
-                            <p class="text-xs text-[#384D95] opacity-70">Ada Orang</p>
-                        </div>
-
-                        <!-- Meja 3 -->
-                        <div class="meja-item meja-kosong cursor-pointer rounded-2xl p-6 bg-gradient-to-br from-[#A492D4]/20 to-[#8B7BC4]/10 border-3 border-[#A492D4] shadow-lg text-center transition-all duration-500" data-meja="3" style="transform: rotateY(15deg) rotateX(5deg); transform-style: preserve-3d;">
-                            <p class="text-3xl mb-2">🪑</p>
-                            <p class="font-black text-[#384D95] text-sm">Meja 3</p>
-                            <p class="text-xs text-[#384D95] opacity-70">Kosong</p>
-                        </div>
-
-                        <!-- Meja 4 -->
-                        <div class="meja-item meja-kosong cursor-pointer rounded-2xl p-6 bg-gradient-to-br from-[#E63E88]/20 to-[#E63E88]/10 border-3 border-[#E63E88] shadow-lg text-center transition-all duration-500" data-meja="4" style="transform: rotateY(-15deg); transform-style: preserve-3d;">
-                            <p class="text-3xl mb-2">🪑</p>
-                            <p class="font-black text-[#384D95] text-sm">Meja 4</p>
-                            <p class="text-xs text-[#384D95] opacity-70">Kosong</p>
-                        </div>
-
-                        <!-- Meja 5 -->
-                        <div class="meja-item meja-terisi cursor-pointer rounded-2xl p-6 bg-gradient-to-br from-[#FF6519]/20 to-[#FFB84D]/10 border-3 border-[#FF6519] shadow-lg text-center" data-meja="5" style="transform: rotateY(0deg); transform-style: preserve-3d;">
-                            <p class="text-3xl mb-2">👤</p>
-                            <p class="font-black text-[#384D95] text-sm">Meja 5</p>
-                            <p class="text-xs text-[#384D95] opacity-70">Ada Orang</p>
-                        </div>
-
-                        <!-- Meja 6 -->
-                        <div class="meja-item meja-kosong cursor-pointer rounded-2xl p-6 bg-gradient-to-br from-[#A492D4]/20 to-[#8B7BC4]/10 border-3 border-[#A492D4] shadow-lg text-center transition-all duration-500" data-meja="6" style="transform: rotateY(15deg); transform-style: preserve-3d;">
-                            <p class="text-3xl mb-2">🪑</p>
-                            <p class="font-black text-[#384D95] text-sm">Meja 6</p>
-                            <p class="text-xs text-[#384D95] opacity-70">Kosong</p>
-                        </div>
-
-                        <!-- Meja 7 -->
-                        <div class="meja-item meja-terisi cursor-pointer rounded-2xl p-6 bg-gradient-to-br from-[#FF6519]/20 to-[#FFB84D]/10 border-3 border-[#FF6519] shadow-lg text-center" data-meja="7" style="transform: rotateY(-15deg) rotateX(-5deg); transform-style: preserve-3d;">
-                            <p class="text-3xl mb-2">👤</p>
-                            <p class="font-black text-[#384D95] text-sm">Meja 7</p>
-                            <p class="text-xs text-[#384D95] opacity-70">Ada Orang</p>
-                        </div>
-
-                        <!-- Meja 8 -->
-                        <div class="meja-item meja-kosong cursor-pointer rounded-2xl p-6 bg-gradient-to-br from-[#E63E88]/20 to-[#E63E88]/10 border-3 border-[#E63E88] shadow-lg text-center transition-all duration-500" data-meja="8" style="transform: rotateY(0deg) rotateX(-5deg); transform-style: preserve-3d;">
-                            <p class="text-3xl mb-2">🪑</p>
-                            <p class="font-black text-[#384D95] text-sm">Meja 8</p>
-                            <p class="text-xs text-[#384D95] opacity-70">Kosong</p>
-                        </div>
-
-                        <!-- Meja 9 -->
-                        <div class="meja-item meja-kosong cursor-pointer rounded-2xl p-6 bg-gradient-to-br from-[#A492D4]/20 to-[#8B7BC4]/10 border-3 border-[#A492D4] shadow-lg text-center transition-all duration-500" data-meja="9" style="transform: rotateY(15deg) rotateX(-5deg); transform-style: preserve-3d;">
-                            <p class="text-3xl mb-2">🪑</p>
-                            <p class="font-black text-[#384D95] text-sm">Meja 9</p>
-                            <p class="text-xs text-[#384D95] opacity-70">Kosong</p>
-                        </div>
+                        @endfor
                     </div>
                 </div>
             </div>
@@ -418,6 +368,10 @@
 </style>
 
 <script>
+    const DURATION = {{ $duration }};
+    const METHOD_NAME = '{{ $method }}';
+    const METHOD_COLOR = '{{ $methodColor }}';
+    
     // ===== TIME & DATE =====
     function updateTimeDate() {
         const now = new Date();

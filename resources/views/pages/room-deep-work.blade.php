@@ -7,9 +7,9 @@
     <div class="max-w-7xl mx-auto">
         <!-- Header Info -->
         <div class="grid grid-cols-4 gap-4 mb-8 z-10 relative">
-            <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-4 border-2 border-[#E63E88] shadow-lg">
-                <p class="text-xs font-bold text-[#E63E88] opacity-60">🍅 Metode</p>
-                <p class="text-lg font-black text-[#E63E88]">Pomodoro</p>
+            <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-4 border-2 border-[#384D95] shadow-lg">
+                <p class="text-xs font-bold text-[#384D95] opacity-60">🧠 Metode</p>
+                <p class="text-lg font-black text-[#384D95]">Deep Work</p>
             </div>
             <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-4 border-2 border-[#384D95] shadow-lg">
                 <p class="text-xs font-bold text-[#384D95] opacity-60">⏰ Waktu</p>
@@ -21,7 +21,7 @@
             </div>
             <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-4 border-2 border-[#384D95] shadow-lg">
                 <p class="text-xs font-bold text-[#384D95] opacity-60">⏱ Durasi</p>
-                <p class="text-lg font-black text-[#E63E88]">25 Menit</p>
+                <p class="text-lg font-black text-[#384D95]">90 Menit</p>
             </div>
         </div>
 
@@ -29,9 +29,9 @@
             <!-- Main Room - Meja Selection dengan Perspective 3D -->
             <div class="lg:col-span-2">
                 <!-- Timer Display -->
-                <div id="timerSection" class="hidden bg-gradient-to-br from-[#E63E88] to-[#d42d74] rounded-3xl p-8 text-white mb-8 shadow-2xl border-4 border-white text-center">
-                    <p class="text-sm opacity-80 mb-2 font-semibold">SESI FOKUS SEDANG BERJALAN</p>
-                    <h2 id="mainTimer" class="text-7xl font-black font-mono mb-4">25:00</h2>
+                <div id="timerSection" class="hidden bg-gradient-to-br from-[#384D95] to-[#2a3a6a] rounded-3xl p-8 text-white mb-8 shadow-2xl border-4 border-white text-center">
+                    <p class="text-sm opacity-80 mb-2 font-semibold">SESI DEEP WORK SEDANG BERJALAN</p>
+                    <h2 id="mainTimer" class="text-7xl font-black font-mono mb-4">90:00</h2>
                     <div class="flex gap-4 justify-center">
                         <button id="pauseBtn" class="px-8 py-3 bg-white/20 hover:bg-white/30 rounded-xl font-bold transition-all">⏸ Jeda</button>
                         <button id="stopBtn" class="px-8 py-3 bg-white/20 hover:bg-white/30 rounded-xl font-bold transition-all">⏹ Hentikan</button>
@@ -41,10 +41,10 @@
 
                 <!-- Meja Selection (9 Grid) - Perspective 3D -->
                 <div id="mejaSection" class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 border-2 border-[#384D95] shadow-lg" style="perspective: 1200px;">
-                    <h3 class="text-2xl font-black text-[#384D95] mb-6">Ruangan Pomodoro 🪑</h3>
+                    <h3 class="text-2xl font-black text-[#384D95] mb-6">Ruangan Deep Work 🧠</h3>
                     <div class="grid grid-cols-3 gap-6" style="transform-style: preserve-3d;">
                         <!-- Meja 1 -->
-                        <div class="meja-item meja-kosong cursor-pointer rounded-2xl p-6 bg-gradient-to-br from-[#E63E88]/20 to-[#E63E88]/10 border-3 border-[#E63E88] shadow-lg text-center transition-all duration-500" data-meja="1" style="transform: rotateY(-15deg) rotateX(5deg); transform-style: preserve-3d;">
+                        <div class="meja-item meja-kosong cursor-pointer rounded-2xl p-6 bg-gradient-to-br from-[#384D95]/20 to-[#384D95]/10 border-3 border-[#384D95] shadow-lg text-center transition-all duration-500" data-meja="1" style="transform: rotateY(-15deg) rotateX(5deg); transform-style: preserve-3d;">
                             <p class="text-3xl mb-2">🪑</p>
                             <p class="font-black text-[#384D95] text-sm">Meja 1</p>
                             <p class="text-xs text-[#384D95] opacity-70">Kosong</p>
@@ -65,7 +65,7 @@
                         </div>
 
                         <!-- Meja 4 -->
-                        <div class="meja-item meja-kosong cursor-pointer rounded-2xl p-6 bg-gradient-to-br from-[#E63E88]/20 to-[#E63E88]/10 border-3 border-[#E63E88] shadow-lg text-center transition-all duration-500" data-meja="4" style="transform: rotateY(-15deg); transform-style: preserve-3d;">
+                        <div class="meja-item meja-kosong cursor-pointer rounded-2xl p-6 bg-gradient-to-br from-[#384D95]/20 to-[#384D95]/10 border-3 border-[#384D95] shadow-lg text-center transition-all duration-500" data-meja="4" style="transform: rotateY(-15deg); transform-style: preserve-3d;">
                             <p class="text-3xl mb-2">🪑</p>
                             <p class="font-black text-[#384D95] text-sm">Meja 4</p>
                             <p class="text-xs text-[#384D95] opacity-70">Kosong</p>
@@ -93,7 +93,7 @@
                         </div>
 
                         <!-- Meja 8 -->
-                        <div class="meja-item meja-kosong cursor-pointer rounded-2xl p-6 bg-gradient-to-br from-[#E63E88]/20 to-[#E63E88]/10 border-3 border-[#E63E88] shadow-lg text-center transition-all duration-500" data-meja="8" style="transform: rotateY(0deg) rotateX(-5deg); transform-style: preserve-3d;">
+                        <div class="meja-item meja-kosong cursor-pointer rounded-2xl p-6 bg-gradient-to-br from-[#384D95]/20 to-[#384D95]/10 border-3 border-[#384D95] shadow-lg text-center transition-all duration-500" data-meja="8" style="transform: rotateY(0deg) rotateX(-5deg); transform-style: preserve-3d;">
                             <p class="text-3xl mb-2">🪑</p>
                             <p class="font-black text-[#384D95] text-sm">Meja 8</p>
                             <p class="text-xs text-[#384D95] opacity-70">Kosong</p>
@@ -113,7 +113,7 @@
             <div class="space-y-6">
                 <!-- Music Player -->
                 <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-6 border-2 border-[#384D95] shadow-lg">
-                    <h4 class="text-lg font-black text-[#E63E88] mb-4">🎵 Music</h4>
+                    <h4 class="text-lg font-black text-[#384D95] mb-4">🎵 Music</h4>
                     
                     <!-- Quick Playlists -->
                     <div class="mb-4">
@@ -121,7 +121,7 @@
                         <div class="grid grid-cols-3 gap-2">
                             <button onclick="playQuickPlaylist('focus')" class="p-2 bg-[#384D95]/20 border-2 border-[#384D95] text-[#384D95] rounded-lg text-xs font-bold hover:bg-[#384D95] hover:text-white transition-all">🧠 Focus</button>
                             <button onclick="playQuickPlaylist('chill')" class="p-2 bg-[#A492D4]/20 border-2 border-[#A492D4] text-[#384D95] rounded-lg text-xs font-bold hover:bg-[#A492D4] hover:text-white transition-all">😌 Chill</button>
-                            <button onclick="playQuickPlaylist('nature')" class="p-2 bg-[#E63E88]/20 border-2 border-[#E63E88] text-[#384D95] rounded-lg text-xs font-bold hover:bg-[#E63E88] hover:text-white transition-all">⚡ Energize</button>
+                            <button onclick="playQuickPlaylist('nature')" class="p-2 bg-[#384D95]/20 border-2 border-[#384D95] text-[#384D95] rounded-lg text-xs font-bold hover:bg-[#384D95] hover:text-white transition-all">🌿 Nature</button>
                         </div>
                     </div>
 
@@ -134,8 +134,8 @@
 
                     <!-- Custom Link -->
                     <p class="text-xs font-bold text-[#384D95] mb-2">🔗 Link Sendiri:</p>
-                    <input type="text" id="musicInput" placeholder="Paste link musik di sini..." class="w-full p-2 border-2 border-[#384D95] rounded-lg text-xs mb-3 focus:outline-none focus:ring-2 focus:ring-[#E63E88]">
-                    <button onclick="loadMusic()" class="w-full p-2 bg-[#E63E88] text-white rounded-lg text-xs font-bold hover:bg-[#d42d74] transition-all mb-3">Putar Musik</button>
+                    <input type="text" id="musicInput" placeholder="Paste link musik di sini..." class="w-full p-2 border-2 border-[#384D95] rounded-lg text-xs mb-3 focus:outline-none focus:ring-2 focus:ring-[#384D95]">
+                    <button onclick="loadMusic()" class="w-full p-2 bg-[#384D95] text-white rounded-lg text-xs font-bold hover:bg-[#2a3a6a] transition-all mb-3">Putar Musik</button>
                     
                     <audio id="audioPlayer" controls style="width: 100%; height: 40px;"></audio>
                     
@@ -148,31 +148,23 @@
                     <div id="musicStatus" class="mt-2 text-xs text-[#384D95] text-center opacity-70">
                         <p class="mb-2">📱 Sumber: MP3, SoundCloud, Spotify</p>
                     </div>
-                    <details class="text-xs text-[#384D95] opacity-70 mt-2">
-                        <summary class="cursor-pointer font-bold">💡 Cara Mendapatkan Link</summary>
-                        <div class="mt-2 p-2 bg-[#384D95]/5 rounded text-left">
-                            <p class="mb-1"><strong>🎵 Spotify:</strong> Klik share → Copy link</p>
-                            <p class="mb-1"><strong>☁️ SoundCloud:</strong> Klik share → Copy URL</p>
-                            <p><strong>🔗 MP3 Direct:</strong> Paste URL file .mp3</p>
-                        </div>
-                    </details>
                 </div>
 
                 <!-- Games -->
                 <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-6 border-2 border-[#384D95] shadow-lg">
-                    <h4 class="text-lg font-black text-[#E63E88] mb-4">🎮 Games</h4>
-                    <button onclick="startGame('memory')" class="w-full p-2 bg-[#E63E88]/10 border-2 border-[#E63E88] text-[#384D95] rounded-lg text-xs font-bold hover:bg-[#E63E88] hover:text-white transition-all mb-2">🧠 Memory Match</button>
-                    <button onclick="startGame('snake')" class="w-full p-2 bg-[#384D95]/10 border-2 border-[#E63E88] text-[#384D95] rounded-lg text-xs font-bold hover:bg-[#384D95] hover:text-white transition-all mb-2">🐍 Snake Game</button>
-                    <button onclick="startGame('quiz')" class="w-full p-2 bg-[#A492D4]/10 border-2 border-[#A492D4] text-[#384D95] rounded-lg text-xs font-bold hover:bg-[#A492D4] hover:text-white transition-all">❓ Quick Quiz</button>
+                    <h4 class="text-lg font-black text-[#384D95] mb-4">🎮 Games</h4>
+                    <button onclick="startGame('memory')" class="w-full p-2 bg-[#384D95]/10 border-2 border-[#384D95] text-[#384D95] rounded-lg text-xs font-bold hover:bg-[#384D95] hover:text-white transition-all mb-2">🧠 Memory Match</button>
+                    <button onclick="startGame('snake')" class="w-full p-2 bg-[#384D95]/10 border-2 border-[#384D95] text-[#384D95] rounded-lg text-xs font-bold hover:bg-[#384D95] hover:text-white transition-all mb-2">🐍 Snake Game</button>
+                    <button onclick="startGame('quiz')" class="w-full p-2 bg-[#384D95]/10 border-2 border-[#384D95] text-[#384D95] rounded-lg text-xs font-bold hover:bg-[#384D95] hover:text-white transition-all">❓ Quick Quiz</button>
                 </div>
 
                 <!-- To-Do List -->
                 <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-6 border-2 border-[#384D95] shadow-lg">
-                    <h4 class="text-lg font-black text-[#E63E88] mb-4">📝 To-Do</h4>
+                    <h4 class="text-lg font-black text-[#384D95] mb-4">📝 To-Do</h4>
                     <div id="todoList" class="space-y-2 mb-3 max-h-32 overflow-y-auto"></div>
                     <div class="flex gap-2">
-                        <input type="text" id="todoInput" placeholder="Tulis task..." class="flex-1 p-2 border-2 border-[#384D95] rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#E63E88]">
-                        <button onclick="addTodo()" class="p-2 bg-[#E63E88] text-white rounded-lg font-bold hover:bg-[#d42d74] transition-all">+</button>
+                        <input type="text" id="todoInput" placeholder="Tulis task..." class="flex-1 p-2 border-2 border-[#384D95] rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#384D95]">
+                        <button onclick="addTodo()" class="p-2 bg-[#384D95] text-white rounded-lg font-bold hover:bg-[#2a3a6a] transition-all">+</button>
                     </div>
                 </div>
             </div>
@@ -185,18 +177,18 @@
     <div class="bg-white rounded-3xl w-full max-w-5xl max-h-[95vh] shadow-2xl flex flex-col">
         <div class="flex justify-between items-center p-6 border-b-2 border-[#384D95]/10">
             <h2 id="gameTitle" class="text-3xl font-black text-[#384D95]">Game Title</h2>
-            <button onclick="closeGame()" class="text-4xl font-bold text-[#E63E88] hover:scale-125 transition-all duration-200">✕</button>
+            <button onclick="closeGame()" class="text-4xl font-bold text-[#384D95] hover:scale-125 transition-all duration-200">✕</button>
         </div>
         <div id="gameContent" class="flex-1 overflow-hidden p-6 flex items-center justify-center"></div>
     </div>
 </div>
 
-<!-- Floating Timer Widget (New) -->
+<!-- Floating Timer Widget -->
 <div id="floatingTimer">
     <button class="close-btn" onclick="hideFloatingTimer()">✕</button>
     <div class="timer-content">
-        <div class="timer-info">⏱ Sesi Pomodoro</div>
-        <div class="timer-time" id="floatingTimerDisplay">25:00</div>
+        <div class="timer-info">⏱ Deep Work</div>
+        <div class="timer-time" id="floatingTimerDisplay">90:00</div>
         <div class="timer-controls">
             <button onclick="pauseTimer()">⏸</button>
             <button onclick="stopTimer()">⏹</button>
@@ -206,6 +198,79 @@
 </div>
 
 <style>
+    #interactive-bg {
+        cursor: pointer;
+        pointer-events: auto;
+        display: block;
+    }
+
+    @keyframes bounce-soft {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+    }
+
+    .animate-bounce-soft {
+        animation: bounce-soft 2s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-15px) rotate(5deg); }
+    }
+
+    .animate-float {
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .feature-card {
+        transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .feature-card:hover {
+        transform: translateY(-8px);
+    }
+
+    @keyframes counterUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .stat-number {
+        animation: counterUp 0.8s ease-out;
+    }
+
+    .cta-button {
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+    }
+
+    .cta-button-primary {
+        background: linear-gradient(135deg, #E63E88 0%, #d42d74 100%);
+    }
+
+    .cta-button-primary:hover {
+        transform: translateY(-6px) scale(1.1);
+        box-shadow: 0 16px 32px rgba(230, 62, 136, 0.5);
+    }
+
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    .bg-gradient-to-r {
+        animation: gradientShift 3s ease infinite;
+        background-size: 200% 200%;
+    }
+
     @keyframes fadeInScale {
         from { opacity: 0; transform: scale(0.95); }
         to { opacity: 1; transform: scale(1); }
@@ -418,6 +483,11 @@
 </style>
 
 <script>
+    const DURATION = 90 * 60; // 90 menit untuk Deep Work
+    const METHOD_NAME = 'Deep Work';
+    const METHOD_COLOR = '#384D95';
+    const TIMER_COLOR = 'from-[#384D95] to-[#2a3a6a]';
+
     // ===== TIME & DATE =====
     function updateTimeDate() {
         const now = new Date();
@@ -589,7 +659,7 @@
     });
 
     // ===== TIMER (SYNC WITH GLOBAL) =====
-    const selectedDuration = 25 * 60; // 25 menit
+    const selectedDuration = 90 * 60; // 90 menit
     let timeRemaining = selectedDuration;
     let timerInterval = null;
     let isRunning = false;
@@ -1173,12 +1243,7 @@
         };
         
         const errorMsg = errorMessages[audioPlayer.error?.code] || 'Unknown error';
-        updateMusicStatus(`❌ ${errorMsg}. Periksa path file!`);
-        
-        if (currentPlaylistType) {
-            currentPlaylistIndex = (currentPlaylistIndex + 1) % playlist.length;
-            setTimeout(playPlaylistTrack, 1500);
-        }
+        updateMusicStatus(`❌ Gagal memuat. Periksa path file musik!`);
     });
 
     function loadMusic() {
@@ -1608,54 +1673,4 @@
         for (let i = 0; i < 5; i++) {
             const x = canvas.width * (0.2 + Math.sin(time + i) * 0.3);
             const y = canvas.height * (0.3 + Math.cos(time * 1.2 + i) * 0.3);
-            const radius = 150 + Math.sin(time + i * 2) * 80;
-            ctx.beginPath();
-            ctx.arc(x, y, radius, 0, Math.PI * 2);
-            ctx.stroke();
-        }
-        ctx.globalAlpha = 1;
-    }
-
-    function animate() {
-        drawBackground();
-        drawDecorations();
-
-        liquidBlobs.forEach(blob => {
-            blob.update(mouseX, mouseY);
-            blob.draw();
-        });
-
-        for (let i = particles.length - 1; i >= 0; i--) {
-            particles[i].update();
-            particles[i].draw();
-
-            if (particles[i].life <= 0) {
-                particles.splice(i, 1);
-            }
-        }
-
-        ctx.globalAlpha = 0.05;
-        ctx.strokeStyle = '#E63E88';
-        ctx.lineWidth = 1;
-        for (let i = 0; i < liquidBlobs.length; i++) {
-            for (let j = i + 1; j < liquidBlobs.length; j++) {
-                const dx = liquidBlobs[i].x - liquidBlobs[j].x;
-                const dy = liquidBlobs[i].y - liquidBlobs[j].y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-                if (dist < 250) {
-                    ctx.beginPath();
-                    ctx.moveTo(liquidBlobs[i].x, liquidBlobs[i].y);
-                    ctx.lineTo(liquidBlobs[j].x, liquidBlobs[j].y);
-                    ctx.stroke();
-                }
-            }
-        }
-        ctx.globalAlpha = 1;
-
-        requestAnimationFrame(animate);
-    }
-
-    animate();
-</script>
-
-@endsection
+            const radius = 150 + Math.sin(time + i *

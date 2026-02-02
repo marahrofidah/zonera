@@ -14,22 +14,59 @@ Route::get('/calendar', function () {
 Route::get('/profile', function () {
     return view('pages.profile');
 })->name('profile');
-Route::get('/room/pomodoro', function () {
+
+// Study Rooms
+Route::get('/room/pomodoro', function() {
     return view('pages.room-pomodoro');
 })->name('room.pomodoro');
-Route::get('/room/deep-work', function () {
-    return view('pages.room-deep-work');
+
+Route::get('/room/deep-work', function() {
+    return view('components.study-room', [
+        'method' => 'Deep Work',
+        'duration' => 90 * 60,
+        'methodColor' => '#384D95',
+        'timerGradient' => 'from-[#384D95] to-[#2a3a6a]',
+        'emoji' => '🧠'
+    ]);
 })->name('room.deep-work');
-Route::get('/room/ultradian', function () {
-    return view('pages.room-ultradian');
+
+Route::get('/room/ultradian', function() {
+    return view('components.study-room', [
+        'method' => 'Ultradian',
+        'duration' => 50 * 60,
+        'methodColor' => '#E63E88',
+        'timerGradient' => 'from-[#E63E88] to-[#d42d74]',
+        'emoji' => '⚡'
+    ]);
 })->name('room.ultradian');
-Route::get('/room/marathon', function () {
-    return view('pages.room-marathon');
+
+Route::get('/room/marathon', function() {
+    return view('components.study-room', [
+        'method' => 'Marathon',
+        'duration' => 120 * 60,
+        'methodColor' => '#384D95',
+        'timerGradient' => 'from-[#384D95] to-[#2a3a6a]',
+        'emoji' => '🏃'
+    ]);
 })->name('room.marathon');
-Route::get('/room/power-hour', function () {
-    return view('pages.room-power-hour');
+
+Route::get('/room/power-hour', function() {
+    return view('components.study-room', [
+        'method' => 'Power Hour',
+        'duration' => 60 * 60,
+        'methodColor' => '#E63E88',
+        'timerGradient' => 'from-[#E63E88] to-[#d42d74]',
+        'emoji' => '💪'
+    ]);
 })->name('room.power-hour');
-Route::get('/room/study-block', function () {
-    return view('pages.room-study-block');
+
+Route::get('/room/study-block', function() {
+    return view('components.study-room', [
+        'method' => 'Study Block',
+        'duration' => 180 * 60,
+        'methodColor' => '#384D95',
+        'timerGradient' => 'from-[#384D95] to-[#2a3a6a]',
+        'emoji' => '📚'
+    ]);
 })->name('room.study-block');
 
