@@ -205,7 +205,7 @@
             this.y = canvas.height / 2 + offsetY;
             this.targetX = canvas.width / 2 + offsetX;
             this.targetY = canvas.height / 2 + offsetY;
-            this.baseRadius = 30 + Math.random() * 20;
+            this.baseRadius = 25 + Math.random() * 20;
             this.radius = this.baseRadius;
             this.color = colors[Math.floor(Math.random() * colors.length)];
             this.wobbleAmount = 0;
@@ -229,19 +229,19 @@
 
             // Wobble effect
             this.wobbleAmount += this.wobbleSpeed;
-            this.radius = this.baseRadius + Math.sin(this.wobbleAmount) * 8;
+            this.radius = this.baseRadius + Math.sin(this.wobbleAmount) * 15;
         }
 
         draw() {
             // Blur effect untuk liquid feel
-            ctx.globalAlpha = 0.2;
+            ctx.globalAlpha = 0.4;
             ctx.fillStyle = this.color;
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius * 1.2, 0, Math.PI * 2);
             ctx.fill();
             
             // Inner blob lebih solid
-            ctx.globalAlpha = 0.3;
+            ctx.globalAlpha = 0.6;
             ctx.fillStyle = this.color;
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
@@ -290,9 +290,9 @@
     let particles = [];
 
     // Create multiple liquid blobs dengan offset berbeda
-    for (let i = 0; i < 4; i++) {
-        const offsetX = (Math.random() - 0.5) * 300;
-        const offsetY = (Math.random() - 0.5) * 300;
+    for (let i = 0; i < 6; i++) {
+        const offsetX = (Math.random() - 0.5) * 600;
+        const offsetY = (Math.random() - 0.5) * 600;
         liquidBlobs.push(new LiquidBlob(offsetX, offsetY));
     }
 
@@ -359,15 +359,15 @@
 
     // Draw decorative circles
     function drawDecorations() {
-        ctx.globalAlpha = 0.04;
-        ctx.strokeStyle = '#384D95';
-        ctx.lineWidth = 1.5;
+        ctx.globalAlpha = 0.15;
+        ctx.strokeStyle = '#E63E88';
+        ctx.lineWidth = 2.5;
         
         const time = Date.now() * 0.0002;
         for (let i = 0; i < 5; i++) {
             const x = canvas.width * (0.2 + Math.sin(time + i) * 0.3);
             const y = canvas.height * (0.3 + Math.cos(time * 1.2 + i) * 0.3);
-            const radius = 100 + Math.sin(time + i * 2) * 50;
+            const radius = 150 + Math.sin(time + i * 2) * 80;
             ctx.beginPath();
             ctx.arc(x, y, radius, 0, Math.PI * 2);
             ctx.stroke();

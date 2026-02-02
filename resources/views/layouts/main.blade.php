@@ -8,42 +8,65 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #f8f8f7;
-            --table-beige: #cbc0b2;
-            --accent-wine: #550b14;
-            --muted-brown: #7e6961;
+            --bg-color: #F0E8FF;
+            --primary-pink: #E63E88;
+            --primary-blue: #384D95;
+            --accent-white: #FFFFFF;
+            --text-blue: #384D95;
         }
         body { 
             background-color: var(--bg-color);
             font-family: 'Quicksand', sans-serif;
-            color: var(--muted-brown);
+            color: var(--text-blue);
             overflow-x: hidden;
         }
         /* Navbar ala Dock di Bawah */
         .bottom-nav {
             position: fixed;
-            bottom: 20px;
+            bottom: 24px;
             left: 50%;
             transform: translateX(-50%);
-            background: rgba(203, 192, 178, 0.8); /* Beige dengan transparansi */
-            backdrop-filter: blur(10px);
-            padding: 10px 30px;
-            border-radius: 50px;
+            background: var(--primary-pink);
+            backdrop-filter: blur(15px);
+            padding: 16px 40px;
+            border-radius: 60px;
             display: flex;
-            gap: 25px;
-            border: 1px solid rgba(126, 105, 97, 0.2);
+            gap: 40px;
+            border: 2px solid var(--primary-pink);
             z-index: 1000;
-            box-shadow: 0 50px 50px rgba(0,0,0,0.05);
+            box-shadow: 0 8px 32px rgba(230, 62, 136, 0.2);
         }
         .nav-link {
             transition: all 0.3s ease;
             font-weight: 600;
-            font-size: 0.9rem;
-            color: var(--muted-brown);
+            font-size: 1rem;
+            color: var(--accent-white);
+            padding: 8px 16px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+        .nav-link img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
         }
         .nav-link:hover {
-            color: var(--accent-wine);
-            transform: translateY(-5px);
+            color: var(--accent-white);
+            background-color: var(--primary-blue);
+            transform: translateY(-3px);
+            border-radius: 50px;
+            padding: 10px 48px 10px 24px;
+        }
+        .nav-link.active {
+            color: var(--accent-white);
+            background-color: var(--primary-blue);
+            padding: 10px 48px 10px 24px;
+        }
+        .nav-link.active:hover {
+            transform: translateY(-3px) scale(1.05);
         }
     </style>
 </head>
@@ -52,12 +75,30 @@
     @yield('content')
 
     <nav class="bottom-nav">
-        <a href="/" class="nav-link">Home</a>
-        <a href="/about" class="nav-link">About</a>
-        <a href="/library" class="nav-link">Library</a>
-        <a href="/gallery" class="nav-link">Gallery</a>
-        <a href="/contact" class="nav-link">Contact</a>
-        <a href="/app" class="nav-link font-bold text-wine">App</a>
+        <a href="/" class="nav-link">
+            <img src="/images/icons/nav-home.png" alt="Home">
+            <span>Home</span>
+        </a>
+        <a href="/about" class="nav-link">
+            <img src="/images/icons/nav-about.png" alt="About">
+            <span>About</span>
+        </a>
+        <a href="/library" class="nav-link">
+            <img src="/images/icons/nav-library.png" alt="Library">
+            <span>Library</span>
+        </a>
+        <a href="/calendar" class="nav-link">
+            <img src="/images/icons/nav-calendar.png" alt="Calendar">
+            <span>Calendar</span>
+        </a>
+        <a href="/contact" class="nav-link">
+            <img src="/images/icons/nav-contact.png" alt="Contact">
+            <span>Contact</span>
+        </a>
+        <a href="/app" class="nav-link active" style="background-color: var(--primary-blue); color: var(--accent-white);">
+            <img src="/images/icons/nav-app.png" alt="App">
+            <span>App</span>
+        </a>
     </nav>
 
 </body>
