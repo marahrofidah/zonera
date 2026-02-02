@@ -7,8 +7,8 @@
     <!-- Hero Section -->
     <div class="text-center mb-16 z-10 max-w-2xl px-4">
         <h1 class="text-6xl md:text-7xl font-black text-[#384D95] mb-4">zonera</h1>
-        <p class="text-lg text-[#384D95] opacity-80 mb-3 font-semibold">Platform Belajar Interaktif & Seru</p>
-        <p class="text-sm md:text-base text-[#384D95] opacity-60 font-medium">Kelola waktu belajar, atur to-do, mainkan games, dengarkan musik, dan catat di kalender!</p>
+        <p class="text-lg text-[#384D95] opacity-100 mb-3 font-semibold">Platform Belajar Interaktif & Seru</p>
+        <p class="text-sm md:text-base text-[#384D95] opacity-100 font-medium">Kelola waktu belajar, atur to-do, mainkan games, dengarkan musik, dan catat di kalender!</p>
     </div>
 
     <!-- Features Section - Interactive Carousel -->
@@ -22,37 +22,37 @@
                     <div class="feature-item absolute opacity-0 cursor-pointer transform transition-all hover:scale-105 bg-white/60 backdrop-blur-sm rounded-full p-8" style="transform: translateX(500px);">
                         <img src="/images/icons/jadwal.png" alt="Jadwal Belajar" class="w-48 h-48 mx-auto mb-6">
                         <h3 class="text-2xl font-black text-[#E63E88] mb-2">Jadwal Belajar</h3>
-                        <p class="text-[#384D95] max-w-sm font-medium leading-relaxed opacity-75">Atur jam belajar dengan fleksibel & dapatkan reminder otomatis</p>
+                        <p class="text-[#384D95] max-w-sm font-medium leading-relaxed opacity-100">Atur jam belajar dengan fleksibel & dapatkan reminder otomatis</p>
                     </div>
                     <!-- Feature 2 -->
                     <div class="feature-item absolute opacity-0 cursor-pointer transform transition-all hover:scale-105 bg-white/60 backdrop-blur-sm rounded-full p-8" style="transform: translateX(500px);">
                         <img src="/images/icons/todo.png" alt="To-Do List" class="w-48 h-48 mx-auto mb-6">
                         <h3 class="text-2xl font-black text-[#E63E88] mb-2">To-Do List</h3>
-                        <p class="text-[#384D95] max-w-sm font-medium leading-relaxed opacity-75">Catat tasks, prioritas, & raih kepuasan setiap check!</p>
+                        <p class="text-[#384D95] max-w-sm font-medium leading-relaxed opacity-100">Catat tasks, prioritas, & raih kepuasan setiap check!</p>
                     </div>
                     <!-- Feature 3 -->
                     <div class="feature-item absolute opacity-0 cursor-pointer transform transition-all hover:scale-105 bg-white/60 backdrop-blur-sm rounded-full p-8" style="transform: translateX(500px);">
                         <img src="/images/icons/games.png" alt="Mini Games" class="w-48 h-48 mx-auto mb-6">
                         <h3 class="text-2xl font-black text-[#E63E88] mb-2">Mini Games</h3>
-                        <p class="text-[#384D95] max-w-sm font-medium leading-relaxed opacity-75">Mainkan quiz, puzzle, & games seru untuk refresh pikiran</p>
+                        <p class="text-[#384D95] max-w-sm font-medium leading-relaxed opacity-100">Mainkan quiz, puzzle, & games seru untuk refresh pikiran</p>
                     </div>
                     <!-- Feature 4 -->
                     <div class="feature-item absolute opacity-0 cursor-pointer transform transition-all hover:scale-105 bg-white/60 backdrop-blur-sm rounded-full p-8" style="transform: translateX(500px);">
                         <img src="/images/icons/musik.png" alt="Musik Fokus" class="w-48 h-48 mx-auto mb-6">
                         <h3 class="text-2xl font-black text-[#E63E88] mb-2">Musik Fokus</h3>
-                        <p class="text-[#384D95] max-w-sm font-medium leading-relaxed opacity-75">3 playlist curated: Focus, Chill, Energize</p>
+                        <p class="text-[#384D95] max-w-sm font-medium leading-relaxed opacity-100">3 playlist curated: Focus, Chill, Energize</p>
                     </div>
                     <!-- Feature 5 -->
                     <div class="feature-item absolute opacity-0 cursor-pointer transform transition-all hover:scale-105 bg-white/60 backdrop-blur-sm rounded-full p-8" style="transform: translateX(500px);">
                         <img src="/images/icons/kalender.png" alt="Kalender Catatan" class="w-48 h-48 mx-auto mb-6">
                         <h3 class="text-2xl font-black text-[#E63E88] mb-2">Kalender Catatan</h3>
-                        <p class="text-[#384D95] max-w-sm font-medium leading-relaxed opacity-75">Dokumentasi harian dengan markdown & color-coded entries</p>
+                        <p class="text-[#384D95] max-w-sm font-medium leading-relaxed opacity-100">Dokumentasi harian dengan markdown & color-coded entries</p>
                     </div>
                     <!-- Feature 6 -->
                     <div class="feature-item absolute opacity-0 cursor-pointer transform transition-all hover:scale-105 bg-white/60 backdrop-blur-sm rounded-full p-8" style="transform: translateX(500px);">
                         <img src="/images/icons/poin.png" alt="Poin & Level" class="w-48 h-48 mx-auto mb-6">
                         <h3 class="text-2xl font-black text-[#E63E88] mb-2">Poin & Level</h3>
-                        <p class="text-[#384D95] max-w-sm font-medium leading-relaxed opacity-75">Naik level, unlock badge, & compete di leaderboard</p>
+                        <p class="text-[#384D95] max-w-sm font-medium leading-relaxed opacity-100">Naik level, unlock badge, & compete di leaderboard</p>
                     </div>
                 </div>
 

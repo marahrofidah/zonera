@@ -5,17 +5,14 @@
 
 <main class="min-h-screen flex flex-col items-center justify-center pt-20 pb-32 relative px-4">
     <!-- Hero Section -->
-    <div class="text-center mb-20 z-10 max-w-3xl">
-        <div class="inline-block mb-6">
-            <div class="text-7xl animate-bounce-soft mb-4">🌟</div>
-        </div>
+    <div class="text-center mb-10 z-10 max-w-3xl">
         <h1 class="text-6xl md:text-7xl font-black text-[#384D95] mb-6">About zonera</h1>
-        <p class="text-xl text-[#384D95] opacity-80 font-semibold mb-4">Platform Belajar yang Bikin Belajar Jadi Seru & Produktif!</p>
-        <p class="text-lg text-[#384D95] opacity-60 font-medium">Kami percaya belajar itu gak perlu membosankan. Dengan zonera, kelola waktu, atur tasks, main games, dengarkan musik, dan catat pelajaran—semuanya dalam satu tempat yang fun! 🎉</p>
+        <p class="text-xl text-[#384D95] opacity-100 font-semibold mb-4">Platform Belajar yang Bikin Belajar Jadi Seru & Produktif!</p>
+        <p class="text-lg text-[#384D95] opacity-100 font-medium">Kami percaya belajar itu gak perlu membosankan. Dengan zonera, kelola waktu, atur tasks, main games, dengarkan musik, dan catat pelajaran—semuanya dalam satu tempat yang fun! 🎉</p>
     </div>
 
     <!-- Mission & Vision Section -->
-    <div class="w-full max-w-5xl mb-20 z-10">
+    <div class="w-full max-w-6xl mb-20 z-10">
         <div class="grid md:grid-cols-2 gap-8">
             <!-- Mission Card -->
             <div class="group bg-[#E63E88] backdrop-blur-sm rounded-full py-8 md:py-10 px-16 md:px-24 border-2 border-[#E63E88] hover:border-[#384D95] transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer">
