@@ -36,7 +36,7 @@
 
     <!-- Features Section -->
     <div class="w-full max-w-5xl mb-20 z-10">
-        <h2 class="text-4xl font-black text-center text-[#384D95] mb-12">Mengapa Zonera?</h2>
+        <h2 class="text-4xl font-black text-center text-[#384D95] mb-12">Mengapa zonera?</h2>
         <div class="grid md:grid-cols-3 gap-6">
             <!-- Feature 1 -->
             <div class="feature-card bg-white backdrop-blur-sm rounded-full p-8 border-2 border-[#E63E88] hover:border-[#384D95] transition-all duration-300 hover:shadow-xl hover:-translate-y-2 text-center cursor-pointer">
