@@ -202,7 +202,7 @@
         border-color: #384D95;
         box-shadow: 0 4px 12px rgba(56, 77, 149, 0.2);
     }
-
+/* deym */
     .calendar-day.has-note::before {
         content: '';
         position: absolute;
