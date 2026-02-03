@@ -104,12 +104,12 @@
 <script>
     // ===== BADGE SYSTEM =====//
     const badges = [
-        { id: 1, name: 'Game Master', image: '/images/badges/badge1.png', cost: 100, description: 'Menang 10 game' },
-        { id: 2, name: 'Genius Quiz', image: '/images/badges/badge2.png', cost: 150, description: 'Quiz score 100' },
-        { id: 3, name: 'Memory Pro', image: '/images/badges/badge3.png', cost: 80, description: 'Memory match sempurna' },
-        { id: 4, name: 'Snake Champion', image: '/images/badges/badge4.png', cost: 120, description: 'Snake score 500' },
-        { id: 5, name: 'Rising Star', image: '/images/badges/badge5.png', cost: 200, description: 'Total score 500' },
-        { id: 6, name: 'Legend', image: '/images/badges/badge6.png', cost: 500, description: 'Total score 2000' }
+        { id: 1, name: 'Wandering Waddler', image: '/images/badges/badge1.png', cost: 100, description: 'Menang 10 game' },
+        { id: 2, name: 'The Octo-Captain', image: '/images/badges/badge2.png', cost: 150, description: 'Quiz score 100' },
+        { id: 3, name: 'Ronin Rabbit', image: '/images/badges/badge3.png', cost: 80, description: 'Memory match sempurna' },
+        { id: 4, name: 'Noble Fin', image: '/images/badges/badge4.png', cost: 120, description: 'Snake score 500' },
+        { id: 5, name: 'Zen Master Panda', image: '/images/badges/badge5.png', cost: 200, description: 'Total score 500' },
+        { id: 6, name: 'Imperial Drake', image: '/images/badges/badge6.png', cost: 500, description: 'Total score 2000' }
     ];
 
     let userScore = JSON.parse(localStorage.getItem('userScore')) || { total: 0, games: {} };
