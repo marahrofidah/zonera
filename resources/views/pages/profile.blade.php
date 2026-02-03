@@ -21,7 +21,7 @@
                     </div>
                 </div>
 
-                <!-- Info -->
+                <!-- Info ey-->
                 <div class="md:col-span-2">
                     <h2 class="text-3xl font-black text-[#384D95] mb-2">Pelajar Zonera</h2>
                     <p class="text-[#384D95] opacity-70 mb-6">Level 1 • Member sejak hari ini</p>
