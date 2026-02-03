@@ -16,9 +16,9 @@
             <div class="grid md:grid-cols-3 gap-8 items-center">
                 <!-- Avatar -->
                 <div class="text-center">
-                    <div class="w-32 h-32 mx-auto bg-gradient-to-br from-[#E63E88] to-[#d42d74] rounded-full flex items-center justify-center text-6xl shadow-lg border-4 border-white">
-                        🎓
-                    </div>
+                <div class="w-32 h-32 mx-auto bg-gradient-to-br from-[#E63E88] to-[#d42d74] rounded-full flex items-center justify-center shadow-lg border-4 border-white overflow-hidden">
+                    <img src="images/icons/profil.jpg" alt="Avatar" class="w-full h-full object-cover">
+                </div>
                 </div>
 
                 <!-- Info -->
