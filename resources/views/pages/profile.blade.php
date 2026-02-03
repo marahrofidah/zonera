@@ -173,7 +173,7 @@
             if (badge) {
                 html += `
                     <div class="text-center badge-item badge-unlocked">
-                        <div class="w-20 h-20 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg">
+                        <div class="w-20 h-20 mx-auto mb-2">
                             <img src="${badge.image}" alt="${badge.name}" class="w-full h-full object-cover">
                         </div>
                         <p class="font-bold text-[#384D95] text-sm">${badge.name}</p>
