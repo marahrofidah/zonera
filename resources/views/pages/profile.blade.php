@@ -172,7 +172,7 @@
             const badge = badges.find(b => b.id === badgeId);
             if (badge) {
                 html += `
-                    <div class="text-center badge-item badge-unlocked">
+                    <div class="text-center badge-item badge-unlocked rounded-xl p-2">
                         <div class="w-20 h-20 mx-auto mb-2">
                             <img src="${badge.image}" alt="${badge.name}" class="w-full h-full object-cover">
                         </div>
