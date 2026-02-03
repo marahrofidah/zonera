@@ -102,21 +102,21 @@
 </style>
 
 <script>
-    // ===== BADGE SYSTEM =====
+    // ===== BADGE SYSTEM =====//
     const badges = [
-        { id: 1, name: 'Game Master', image: '/images/badges/badge1.png', cost: 100, description: 'Menang 10 game' },
-        { id: 2, name: 'Genius Quiz', image: '/images/badges/badge2.png', cost: 150, description: 'Quiz score 100' },
-        { id: 3, name: 'Memory Pro', image: '/images/badges/badge3.png', cost: 80, description: 'Memory match sempurna' },
-        { id: 4, name: 'Snake Champion', image: '/images/badges/badge4.png', cost: 120, description: 'Snake score 500' },
-        { id: 5, name: 'Rising Star', image: '/images/badges/badge5.png', cost: 200, description: 'Total score 500' },
-        { id: 6, name: 'Legend', image: '/images/badges/badge6.png', cost: 500, description: 'Total score 2000' }
+        { id: 1, name: 'Wandering Waddler', image: '/images/badges/badge1.png', cost: 100, description: 'Menang 10 game' },
+        { id: 2, name: 'The Octo-Captain', image: '/images/badges/badge2.png', cost: 150, description: 'Quiz score 100' },
+        { id: 3, name: 'Ronin Rabbit', image: '/images/badges/badge3.png', cost: 80, description: 'Memory match sempurna' },
+        { id: 4, name: 'Noble Fin', image: '/images/badges/badge4.png', cost: 120, description: 'Snake score 500' },
+        { id: 5, name: 'Zen Master Panda', image: '/images/badges/badge5.png', cost: 200, description: 'Total score 500' },
+        { id: 6, name: 'Imperial Drake', image: '/images/badges/badge6.png', cost: 500, description: 'Total score 2000' }
     ];
-// nn
+
     let userScore = JSON.parse(localStorage.getItem('userScore')) || { total: 0, games: {} };
     let userBadges = JSON.parse(localStorage.getItem('userBadges')) || [];
 
     function renderProfile() {
-        // Update score
+        // Update score.
         document.getElementById('totalScore').textContent = userScore.total;
 
         // Update badge count
@@ -194,7 +194,7 @@
 
             html += `
                 <div class="badge-item bg-white border-2 border-[#384D95] rounded-2xl p-6 text-center ${isOwned ? 'badge-unlocked' : ''} ${isOwned ? '' : 'badge-locked'}">
-                    <div class="w-24 h-24 mx-auto mb-3 ">
+                    <div class="w-24 h-24 mx-auto mb-3">
                         <img src="${badge.image}" alt="${badge.name}" class="w-full h-full object-cover">
                     </div>
                     <h4 class="font-black text-[#384D95] mb-2">${badge.name}</h4>
