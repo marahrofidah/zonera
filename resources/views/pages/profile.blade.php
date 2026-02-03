@@ -248,7 +248,7 @@
         alert(`🎉 Selamat! Kamu mendapat badge "${badge.name}"!`);
     }
 
-    // Canvas background (sama seperti halaman lain)
+    // cCanvas background (sama seperti halaman lain)
     const canvas = document.getElementById('interactive-bg');
     const ctx = canvas.getContext('2d');
     const colors = ['#FFFFFF', '#E63E88', '#384D95', '#F0F0F5'];
