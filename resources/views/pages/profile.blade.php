@@ -102,7 +102,7 @@
 </style>
 
 <script>
-    // ===== BADGE SYSTEM =====
+    // ===== BADGE SYSTEM =====//
     const badges = [
         { id: 1, name: 'Game Master', emoji: '🎮', cost: 100, description: 'Menang 10 game' },
         { id: 2, name: 'Genius Quiz', emoji: '🧠', cost: 150, description: 'Quiz score 100' },
