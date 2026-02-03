@@ -116,7 +116,7 @@
     let userBadges = JSON.parse(localStorage.getItem('userBadges')) || [];
 
     function renderProfile() {
-        // Update score
+        // Update score.
         document.getElementById('totalScore').textContent = userScore.total;
 
         // Update badge count
