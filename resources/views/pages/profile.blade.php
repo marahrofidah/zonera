@@ -111,7 +111,7 @@
         { id: 5, name: 'Rising Star', image: '/images/badges/badge5.png', cost: 200, description: 'Total score 500' },
         { id: 6, name: 'Legend', image: '/images/badges/badge6.png', cost: 500, description: 'Total score 2000' }
     ];
-
+// nn
     let userScore = JSON.parse(localStorage.getItem('userScore')) || { total: 0, games: {} };
     let userBadges = JSON.parse(localStorage.getItem('userBadges')) || [];
 
