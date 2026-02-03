@@ -194,7 +194,7 @@
 
             html += `
                 <div class="badge-item bg-white border-2 border-[#384D95] rounded-2xl p-6 text-center ${isOwned ? 'badge-unlocked' : ''} ${isOwned ? '' : 'badge-locked'}">
-                    <div class="w-24 h-24 mx-auto mb-3 rounded-lg overflow-hidden shadow-lg">
+                    <div class="w-24 h-24 mx-auto mb-3">
                         <img src="${badge.image}" alt="${badge.name}" class="w-full h-full object-cover">
                     </div>
                     <h4 class="font-black text-[#384D95] mb-2">${badge.name}</h4>
