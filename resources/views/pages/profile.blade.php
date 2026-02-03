@@ -111,7 +111,11 @@
         { id: 5, name: 'Zen Master Panda', image: '/images/badges/badge5.png', cost: 200, description: 'Total score 500' },
         { id: 6, name: 'Imperial Drake', image: '/images/badges/badge6.png', cost: 500, description: 'Total score 2000' }
     ];
+<<<<<<< HEAD
 
+=======
+// n
+>>>>>>> f9c43bafbbfb4b64429d6a74ea9563ed8f3326a8
     let userScore = JSON.parse(localStorage.getItem('userScore')) || { total: 0, games: {} };
     let userBadges = JSON.parse(localStorage.getItem('userBadges')) || [];
 
