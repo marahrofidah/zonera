@@ -94,7 +94,7 @@
                     <a href="/room/marathon" class="text-xs font-black text-[#384D95] hover:underline transition-all">MULAI SESI →</a>
                 </div>
             </div>
-
+{{-- p --}}
             <div class="method-card method-all method-short bg-white/90 backdrop-blur-md rounded-full p-4 pr-10 transition-all duration-300 hover:shadow-2xl hover:scale-105 border border-white flex items-center gap-5 cursor-pointer group shadow-sm">
             <div class="w-28 h-28 rounded-full bg-pink-100 flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform shadow-inner">
                 <img 
