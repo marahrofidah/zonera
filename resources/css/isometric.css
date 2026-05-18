@@ -1,0 +1,569 @@
+/* ==================== 3D ISOMETRIC STYLES ==================== */
+
+.isometric-scene {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1200px;
+    min-height: 500px;
+}
+
+/* ==================== 3D STUDY DESK ==================== */
+.study-desk {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    transform-style: preserve-3d;
+    animation: floatDesk 3s ease-in-out infinite;
+}
+
+@keyframes floatDesk {
+    0%, 100% { transform: translateY(0px) rotateX(5deg) rotateY(10deg) rotateZ(0deg); }
+    50% { transform: translateY(-10px) rotateX(5deg) rotateY(10deg) rotateZ(0deg); }
+}
+
+.desk-top {
+    position: absolute;
+    width: 120px;
+    height: 80px;
+    background-color: var(--surface-primary);
+    top: 0;
+    left: 0;
+    transform: rotateX(60deg) rotateY(20deg) rotateZ(10deg);
+    border-radius: 4px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.desk-leg-1 {
+    position: absolute;
+    width: 8px;
+    height: 50px;
+    background-color: var(--accent-brown);
+    left: 10px;
+    top: 35px;
+    transform: rotateX(10deg) rotateZ(5deg);
+    border-radius: 2px;
+}
+
+.desk-leg-2 {
+    position: absolute;
+    width: 8px;
+    height: 50px;
+    background-color: var(--accent-brown);
+    right: 10px;
+    top: 35px;
+    transform: rotateX(10deg) rotateZ(-5deg);
+    border-radius: 2px;
+}
+
+/* ==================== LAMP ==================== */
+.study-lamp {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    right: -20px;
+    top: 10px;
+    transform-style: preserve-3d;
+}
+
+.lamp-base {
+    position: absolute;
+    width: 12px;
+    height: 4px;
+    background-color: var(--accent-brown);
+    left: 9px;
+    top: 0;
+    border-radius: 2px;
+}
+
+.lamp-pole {
+    position: absolute;
+    width: 3px;
+    height: 30px;
+    background-color: var(--accent-brown);
+    left: 13.5px;
+    top: 4px;
+    border-radius: 2px;
+}
+
+.lamp-head {
+    position: absolute;
+    width: 16px;
+    height: 12px;
+    background-color: var(--surface-primary);
+    left: 7px;
+    top: 34px;
+    border-radius: 50% 50% 2px 2px;
+    border: 2px solid var(--accent-brown);
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.lamp-head.on {
+    background: linear-gradient(135deg, #ffd89b 0%, #ffb347 100%);
+    box-shadow: 0 0 20px rgba(255, 179, 71, 0.4), inset 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* ==================== PLANT ==================== */
+.mini-plant {
+    position: absolute;
+    width: 24px;
+    height: 28px;
+    left: 20px;
+    top: -15px;
+}
+
+.pot {
+    position: absolute;
+    width: 18px;
+    height: 12px;
+    background-color: var(--surface-secondary);
+    left: 3px;
+    top: 16px;
+    border-radius: 0 0 6px 6px;
+    border: 1px solid var(--accent-brown);
+}
+
+.leaf {
+    position: absolute;
+    width: 8px;
+    height: 12px;
+    background-color: #6b8e23;
+    border-radius: 50% 50% 40% 40%;
+    transform-origin: center bottom;
+}
+
+.leaf-1 { left: 5px; top: 0; transform: rotate(-20deg); }
+.leaf-2 { left: 9px; top: -2px; transform: rotate(20deg); }
+.leaf-3 { left: 12px; top: 2px; transform: rotate(35deg); }
+
+/* ==================== STUDY ROOM ==================== */
+.study-room {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    background: linear-gradient(180deg, #fafaf9 0%, #f8f8f7 100%);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 20px 60px var(--shadow-medium);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.room-desks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    height: 100%;
+}
+
+.desk-card {
+    position: relative;
+    background: linear-gradient(135deg, var(--surface-primary) 0%, var(--surface-secondary) 100%);
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 8px 20px var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 140px;
+}
+
+.desk-card:hover {
+    border-color: var(--accent-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px var(--shadow-medium);
+}
+
+.desk-card.occupied {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.desk-card.occupied .desk-lamp-small {
+    display: block;
+}
+
+.desk-card p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.desk-lamp-small {
+    display: none;
+    width: 12px;
+    height: 8px;
+    background: linear-gradient(135deg, #ffd89b 0%, #ffb347 100%);
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 0 12px rgba(255, 179, 71, 0.5);
+}
+
+/* ==================== AVATAR MINI ==================== */
+.avatar-mini {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent-brown) 100%);
+    margin-bottom: 8px;
+    box-shadow: 0 2px 8px var(--shadow-soft);
+}
+
+/* ==================== STUDY ENVIRONMENT OPTIONS ==================== */
+.environment-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.env-option {
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--border-light);
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.env-option:hover {
+    border-color: var(--accent-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px var(--shadow-medium);
+}
+
+.env-option.active {
+    border-color: var(--accent-dark);
+    background-color: var(--surface-secondary);
+}
+
+.env-thumbnail {
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(135deg, var(--surface-primary) 0%, var(--surface-secondary) 100%);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 3rem;
+}
+
+.env-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+/* ==================== TIMER & CONTROLS ==================== */
+.control-panel {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 2px 8px var(--shadow-soft);
+}
+
+.timer-display {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--accent-dark);
+    font-variant-numeric: tabular-nums;
+    margin: 20px 0;
+}
+
+.control-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ==================== MUSIC PLAYER ==================== */
+.music-player {
+    background-color: var(--surface-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.player-header {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
+
+.music-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.music-input::placeholder {
+    color: var(--text-secondary);
+}
+
+audio {
+    width: 100%;
+    height: 32px;
+    margin-top: 10px;
+}
+
+/* ==================== GAME SECTION ==================== */
+.game-section {
+    background-color: var(--surface-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.game-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.game-btn {
+    background-color: var(--surface-primary);
+    border: 2px solid var(--border-light);
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+}
+
+.game-btn:hover {
+    border-color: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-soft);
+}
+
+/* ==================== TODO LIST ==================== */
+.todo-section {
+    background-color: var(--surface-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.todo-list {
+    margin-top: 15px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    gap: 12px;
+}
+
+.todo-checkbox {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--accent-dark);
+    cursor: pointer;
+}
+
+.todo-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+.todo-input::placeholder {
+    color: var(--text-secondary);
+}
+
+.todo-delete {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.todo-delete:hover {
+    color: var(--accent-dark);
+}
+
+/* ==================== LEARNING METHODS CARD ==================== */
+.method-card {
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--border-light);
+    border-radius: 12px;
+    padding: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.method-card:hover {
+    border-color: var(--accent-dark);
+    box-shadow: 0 8px 24px var(--shadow-medium);
+    transform: translateY(-4px);
+}
+
+.method-card.active {
+    border-color: var(--accent-dark);
+    background-color: var(--surface-secondary);
+    box-shadow: 0 8px 24px var(--shadow-medium);
+}
+
+.method-icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.method-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.method-duration {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.method-description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* ==================== GALLERY MOOD CARDS ==================== */
+.mood-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.mood-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px var(--shadow-soft);
+}
+
+.mood-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px var(--shadow-medium);
+}
+
+.mood-thumbnail {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, var(--surface-primary) 0%, var(--surface-secondary) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.mood-info {
+    padding: 16px;
+}
+
+.mood-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.mood-description {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* ==================== ANIMATION UTILITIES ==================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .study-room {
+        height: auto;
+        min-height: 600px;
+    }
+
+    .room-desks-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .method-card {
+        padding: 16px;
+    }
+
+    .timer-display {
+        font-size: 2.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
