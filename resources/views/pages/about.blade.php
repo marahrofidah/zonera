@@ -84,7 +84,7 @@
 
     <!-- Stats Section -->
     <div class="w-full max-w-5xl mb-12 z-10">
-        <div class="bg-gradient-to-r from-[#E63E88] to-[#384D95] rounded-full p-12 text-white">
+        <div class="bg-gradient-to from-[#E63E88] to-[#384D95] rounded-full p-12 text-white">
             <div class="grid md:grid-cols-4 gap-8 text-center">
                 <div class="stat-item">
                     <div class="text-5xl font-black mb-2 stat-number">10K+</div>
